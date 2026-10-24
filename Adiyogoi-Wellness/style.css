@@ -1,0 +1,377 @@
+
+/* Page ki basic styling aur default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #101010;
+    color: #f5f0e6;
+    line-height: 1.6;
+}
+
+/* Navigation bar */
+header {
+    background: #171717;
+    border-bottom: 1px solid #b99752;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 16px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    color: #d9b765;
+    font-size: 22px;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.nav-links a {
+    color: #f5f0e6;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: #d9b765;
+}
+
+/* Welcome section */
+.hero {
+    min-height: 420px;
+    padding: 100px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background:
+        radial-gradient(ellipse at top, #45371d 0%, #1b1914 38%, #101010 75%);
+}
+
+.tagline {
+    color: #d9b765;
+    letter-spacing: 3px;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    color: #e5c778;
+    font-size: clamp(34px, 6vw, 58px);
+    margin-bottom: 15px;
+}
+
+.hero p:not(.tagline) {
+    max-width: 620px;
+    color: #d2cdc3;
+    margin-bottom: 25px;
+}
+
+/* Common button design */
+.btn {
+    display: inline-block;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 22px;
+    background: #c9a653;
+    color: #17130b;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: #e5c778;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background: #39352d;
+    color: #f5f0e6;
+    border: 1px solid #6b5a35;
+}
+
+/* Common layout for all website sections */
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 65px 5%;
+}
+
+.section h2 {
+    color: #e5c778;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.section-intro {
+    text-align: center;
+    color: #bdb7aa;
+    margin-bottom: 30px;
+}
+
+/* Benefits cards */
+.benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.benefit-card,
+.pose-card,
+.breathing-card,
+.about-card {
+    background: #1b1b1b;
+    border: 1px solid #393126;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.benefit-card {
+    text-align: center;
+}
+
+.benefit-card span {
+    font-size: 32px;
+}
+
+.benefit-card h3 {
+    color: #d9b765;
+    margin: 10px 0;
+}
+
+.benefit-card p,
+.pose-card p,
+.about-card p {
+    color: #c8c2b7;
+    font-size: 14px;
+}
+
+/* Yoga pose search field */
+.search-box {
+    display: block;
+    width: min(100%, 450px);
+    margin: 0 auto 30px;
+    padding: 13px 15px;
+    background: #1b1b1b;
+    color: white;
+    border: 1px solid #75613a;
+    border-radius: 7px;
+    outline: none;
+    font-size: 15px;
+}
+
+.search-box:focus {
+    border-color: #e5c778;
+}
+
+/* Yoga pose cards */
+.pose-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.pose-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.pose-card:hover {
+    transform: translateY(-4px);
+    border-color: #b99752;
+}
+
+.pose-number {
+    color: #d9b765;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.pose-card h3 {
+    color: #f0d38b;
+    font-size: 17px;
+}
+
+.pose-card p {
+    flex-grow: 1;
+}
+
+.pose-link {
+    color: #e5c778;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.pose-link:hover {
+    text-decoration: underline;
+}
+
+.no-results {
+    text-align: center;
+    color: #d9b765;
+}
+
+/* Breathing exercise */
+.breathing-section {
+    text-align: center;
+}
+
+.breathing-card {
+    max-width: 500px;
+    margin: auto;
+    padding: 35px 20px;
+}
+
+.breathing-circle {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    border: 2px solid #d9b765;
+    background: radial-gradient(circle, #42351e, #201b12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f0d38b;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.breathing-circle.inhale {
+    animation: inhale 4s ease-in-out forwards;
+}
+
+.breathing-circle.exhale {
+    animation: exhale 4s ease-in-out forwards;
+}
+
+@keyframes inhale {
+    from { transform: scale(0.85); }
+    to { transform: scale(1.15); }
+}
+
+@keyframes exhale {
+    from { transform: scale(1.15); }
+    to { transform: scale(0.85); }
+}
+
+#breathingInstruction {
+    color: #d2cdc3;
+    margin-bottom: 15px;
+}
+
+.cycle-counter {
+    margin-bottom: 20px;
+    color: #d9b765;
+}
+
+.breathing-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* Student details */
+.about-card {
+    max-width: 650px;
+    margin: auto;
+}
+
+.about-card h3 {
+    color: #d9b765;
+    margin-bottom: 15px;
+}
+
+.about-card p {
+    margin: 10px 0;
+}
+
+/* Footer without social media buttons */
+footer {
+    background: #171717;
+    border-top: 1px solid #393126;
+    padding: 25px 15px;
+    text-align: center;
+    color: #c8c2b7;
+    font-size: 13px;
+}
+
+footer p + p {
+    margin-top: 5px;
+    color: #d9b765;
+}
+
+/* Tablet aur mobile screens ke liye responsive design */
+@media (max-width: 900px) {
+    .benefit-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pose-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .benefit-grid,
+    .pose-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 75px 20px;
+    }
+
+    .section {
+        padding: 45px 5%;
+    }
+
+    .section h2 {
+        font-size: 25px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+}

@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Website ko mobile aur computer dono par responsive rakhta hai -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Adiyogi Wellness</title>
+
+    <!-- External CSS file connect ki gayi hai -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Website ka navigation bar -->
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">ॐ Adiyogi Wellness</h2>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#benefits">Benefits</a>
+                <a href="#poses">Yoga Poses</a>
+                <a href="#breathing">Breathing</a>
+                <a href="#about">About</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main welcome section -->
+    <main>
+        <section class="hero" id="home">
+            <p class="tagline">BALANCE • STRENGTH • PEACE</p>
+            <h1>Find Your Inner Peace</h1>
+
+            <p>
+                Welcome to Adiyogi Wellness — your simple guide to yoga,
+                healthy living and a peaceful mind.
+            </p>
+
+            <a href="#poses" class="btn">Explore Yoga Poses</a>
+        </section>
+
+        <!-- Yoga ke main benefits -->
+        <section class="section" id="benefits">
+            <h2>Benefits of Yoga</h2>
+            <p class="section-intro">
+                Yoga helps us build a healthy body and a calm mind.
+            </p>
+
+            <div class="benefit-grid">
+                <div class="benefit-card">
+                    <span>🧘</span>
+                    <h3>Flexibility</h3>
+                    <p>Helps improve body movement and flexibility.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <span>💪</span>
+                    <h3>Strength</h3>
+                    <p>Supports balance, strength and body control.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <span>🌿</span>
+                    <h3>Relaxation</h3>
+                    <p>Encourages relaxation and mindful breathing.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <span>☀️</span>
+                    <h3>Healthy Routine</h3>
+                    <p>Helps build a regular wellness routine.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Yoga poses JavaScript se automatically show honge -->
+        <section class="section" id="poses">
+            <h2>Explore 29 Yoga Poses</h2>
+            <p class="section-intro">
+                Choose a pose and watch a YouTube tutorial to learn its steps.
+            </p>
+
+            <!-- Search box se pose ka naam search kar sakte hain -->
+            <input
+                type="text"
+                id="poseSearch"
+                class="search-box"
+                placeholder="Search yoga poses..."
+                aria-label="Search yoga poses"
+            >
+
+            <div id="poseGrid" class="pose-grid"></div>
+            <p id="noResults" class="no-results" hidden>
+                No yoga poses found.
+            </p>
+        </section>
+
+        <!-- Simple breathing exercise -->
+        <section class="section breathing-section" id="breathing">
+            <h2>Breathing Exercise</h2>
+
+            <p class="section-intro">
+                Take a short break and focus on slow, comfortable breathing.
+            </p>
+
+            <div class="breathing-card">
+                <div class="breathing-circle" id="breathingCircle">
+                    <span id="breathingText">Ready?</span>
+                </div>
+
+                <p id="breathingInstruction">
+                    Press Start to begin your breathing exercise.
+                </p>
+
+                <p class="cycle-counter">
+                    Completed cycles: <strong id="cycleCount">0</strong>
+                </p>
+
+                <div class="breathing-buttons">
+                    <button id="startBreathing" class="btn">
+                        Start Exercise
+                    </button>
+
+                    <button id="stopBreathing" class="btn secondary-btn">
+                        Stop
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Student details for the school project -->
+        <section class="section about-section" id="about">
+            <h2>About This Project</h2>
+
+            <div class="about-card">
+                <h3>Adiyogi Wellness</h3>
+
+                <p>
+                    This website is designed to spread awareness about yoga,
+                    breathing exercises and healthy living.
+                </p>
+
+                <p><strong>Student Name:</strong> Arihant Jain</p>
+                <p><strong>Class:</strong> 12th-C</p>
+                <p><strong>Project Topic:</strong> Yoga and Physical Fitness</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Simple footer without Instagram or social media buttons -->
+    <footer>
+        <p>ॐ Adiyogi Wellness | Yoga for a Healthier Life</p>
+        <p>School Project • Class 12th-C</p>
+    </footer>
+
+    <!-- External JavaScript file connect ki gayi hai -->
+    <script src="script.js"></script>
+</body>
+</html>
